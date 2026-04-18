@@ -125,3 +125,6 @@ Disciplina: **Computação Gráfica** — Prof.ª **Suzana Sousa**
 | Gustavo Yuji Virgolino Nishimura | 23070007 |
 | Antonio Heitor Gomes Azevedo | 23070017 |
 | Deivison Ryan Brito Tavares | 23070037 |
+
+# Créditos
+Soundtrack do jogo : https://www.youtube.com/watch?v=TdTWbK3gP1I
