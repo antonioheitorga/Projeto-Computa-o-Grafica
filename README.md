@@ -75,6 +75,21 @@ Todos os sprites do jogo são gerados **proceduralmente** por padrão (nave, ast
 
 O `src/assets.py` detecta automaticamente os PNGs e, se não existirem, cai no sprite procedural.
 
+## Áudio (opcional)
+
+O jogo também aceita música de fundo e efeitos sonoros. Se nenhum arquivo for encontrado, o jogo roda normalmente em silêncio — sem erro. Coloque os arquivos em `assets/audio/` com os nomes abaixo (formatos aceitos: `.ogg`, `.wav`, `.mp3` — OGG é o mais confiável no pygame):
+
+| Arquivo | Quando toca |
+|---------|-------------|
+| `music_menu` | Tela de menu e game over |
+| `music_game` | Durante o gameplay |
+| `shoot` | Cada tiro da nave |
+| `explosion` | Asteroide destruído |
+| `powerup` | Coleta de power-up |
+| `hit` | Nave recebe dano |
+
+Volumes padrão podem ser ajustados em [src/audio.py](src/audio.py).
+
 ## Estrutura do projeto
 
 ```
@@ -83,8 +98,8 @@ O `src/assets.py` detecta automaticamente os PNGs e, se não existirem, cai no s
 ├── requirements.txt        # Dependências
 ├── README.md
 ├── assets/
-│   ├── images/             # Sprites (nave, asteroides, projéteis)
-│   └── sounds/             # Efeitos sonoros (opcional)
+│   ├── images/             # Sprites (nave, asteroides, power-up)
+│   └── audio/              # Música e SFX (opcional)
 └── src/
     ├── __init__.py
     ├── game.py             # Classe Game (janela + game loop)
@@ -95,6 +110,8 @@ O `src/assets.py` detecta automaticamente os PNGs e, se não existirem, cai no s
     ├── particles.py        # Partículas de explosão
     ├── starfield.py        # Fundo estelado com paralaxe
     ├── assets.py           # Asset loader com fallback procedural
+    ├── audio.py            # Música + efeitos sonoros (com fallback silencioso)
+    ├── hud.py              # HUD (vidas, score, onda, barra de escudo)
     └── transforms.py       # Transformações geométricas 2D (as 4 obrigatórias)
 ```
 
